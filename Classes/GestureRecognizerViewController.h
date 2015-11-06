@@ -8,7 +8,7 @@
  
  Notice that recognizers ignore the exclusiveTouch setting of views. 
  
-  Version: 1.2
+  Version: 2.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -48,26 +48,24 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2010 Apple Inc. All Rights Reserved.
+ Copyright (C) 2011 Apple Inc. All Rights Reserved.
  
  */
 
 #import <UIKit/UIKit.h>
 
-@interface GestureRecognizerViewController : UIViewController <UIGestureRecognizerDelegate> {
+@interface GestureRecognizerViewController : UIViewController <UIGestureRecognizerDelegate> 
 
-	UITapGestureRecognizer *tapRecognizer;
-	UISwipeGestureRecognizer *swipeLeftRecognizer;
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tapRecognizer;
+@property (nonatomic, strong) IBOutlet UISwipeGestureRecognizer *swipeLeftRecognizer;
 
-	UIImageView *imageView;
-    UISegmentedControl *segmentedControl;
-}
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *segmentedControl;
 
-@property (nonatomic, retain) UITapGestureRecognizer *tapRecognizer;
-@property (nonatomic, retain) UISwipeGestureRecognizer *swipeLeftRecognizer;
+- (IBAction)handleTapFrom:(UITapGestureRecognizer *)recognizer;
+- (IBAction)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer;
+- (IBAction)handleRotationFrom:(UIRotationGestureRecognizer *)recognizer;
 
-@property (nonatomic, retain) UIImageView *imageView;
-@property (nonatomic, retain) IBOutlet UISegmentedControl *segmentedControl;
 
 - (IBAction)takeLeftSwipeRecognitionEnabledFrom:(UISegmentedControl *)aSegmentedControl;
 

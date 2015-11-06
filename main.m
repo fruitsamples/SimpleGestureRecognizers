@@ -3,7 +3,7 @@
      File: main.m
  Abstract: The main file for the application.
  
-  Version: 1.2
+  Version: 2.0
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -43,16 +43,17 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2010 Apple Inc. All Rights Reserved.
+ Copyright (C) 2011 Apple Inc. All Rights Reserved.
  
  */
 
 #import <UIKit/UIKit.h>
+#import "SimpleGestureRecognizersAppDelegate.h"
 
 int main(int argc, char *argv[]) {
     
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
-    [pool release];
-    return retVal;
+    @autoreleasepool {
+        int retVal = UIApplicationMain(argc, argv, nil, NSStringFromClass([SimpleGestureRecognizersAppDelegate class]));
+        return retVal;
+    }
 }

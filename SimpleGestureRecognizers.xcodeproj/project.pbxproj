@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,8 +17,7 @@
 		2893B1AE114F14E60094356F /* rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 2893B1AB114F14E60094356F /* rotation.png */; };
 		2893B1AF114F14E60094356F /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2893B1AC114F14E60094356F /* swipe.png */; };
 		2893B1B0114F14E60094356F /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 2893B1AD114F14E60094356F /* tap.png */; };
-		7E9551A811765C360003D25C /* GestureRecognizerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9551A411765C360003D25C /* GestureRecognizerViewController.xib */; };
-		7E9551A911765C360003D25C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9551A611765C360003D25C /* MainWindow.xib */; };
+		28C38925141B72EF0029723F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C38923141B72EF0029723F /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +35,8 @@
 		2893B1AD114F14E60094356F /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
 		2893B1B2114F14FE0094356F /* SimpleGestureRecognizers-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimpleGestureRecognizers-Info.plist"; sourceTree = "<group>"; };
 		2893B1C3114F163F0094356F /* SimpleGestureRecognizers__Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleGestureRecognizers__Prefix.pch; sourceTree = "<group>"; };
+		28C38924141B72EF0029723F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7E9551A511765C360003D25C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GestureRecognizerViewController.xib; sourceTree = "<group>"; };
-		7E9551A711765C360003D25C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +97,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7E9551A411765C360003D25C /* GestureRecognizerViewController.xib */,
-				7E9551A611765C360003D25C /* MainWindow.xib */,
+				28C38923141B72EF0029723F /* MainStoryboard.storyboard */,
 				2893B1AB114F14E60094356F /* rotation.png */,
 				2893B1AC114F14E60094356F /* swipe.png */,
 				2893B1AD114F14E60094356F /* tap.png */,
@@ -144,8 +141,12 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SimpleGestureRecognizers" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -172,8 +173,7 @@
 				2893B1AE114F14E60094356F /* rotation.png in Resources */,
 				2893B1AF114F14E60094356F /* swipe.png in Resources */,
 				2893B1B0114F14E60094356F /* tap.png in Resources */,
-				7E9551A811765C360003D25C /* GestureRecognizerViewController.xib in Resources */,
-				7E9551A911765C360003D25C /* MainWindow.xib in Resources */,
+				28C38925141B72EF0029723F /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,21 +193,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E9551A411765C360003D25C /* GestureRecognizerViewController.xib */ = {
+		28C38923141B72EF0029723F /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E9551A511765C360003D25C /* en */,
+				28C38924141B72EF0029723F /* en */,
 			);
-			name = GestureRecognizerViewController.xib;
-			sourceTree = SOURCE_ROOT;
-		};
-		7E9551A611765C360003D25C /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E9551A711765C360003D25C /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = SOURCE_ROOT;
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
@@ -216,12 +208,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SimpleGestureRecognizers__Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "SimpleGestureRecognizers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "SimpleGestureRecognizers ";
 			};
 			name = Debug;
@@ -230,10 +225,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SimpleGestureRecognizers__Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "SimpleGestureRecognizers-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "SimpleGestureRecognizers ";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -248,8 +246,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -264,8 +261,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

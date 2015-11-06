@@ -6,7 +6,7 @@ DESCRIPTION:
 
 This sample shows how to use standard gesture recognizers.
 
-A view controller creates four gesture recognizers to recognize a tap, a right swipe, a left swipe, and a rotation gesture. When they recognize a gesture, the recognizers send a suitable message to the view controller, which in turn displays an appropriate image at the location of the gesture.
+A view has four gesture recognizers to recognize a tap, a right swipe, a left swipe, and a rotation gesture. When they recognize a gesture, the recognizers send a suitable message to the view controller, which in turn displays an appropriate image at the location of the gesture.
 
 The sample illustrates some additional features of gesture recognizers.
 
@@ -17,17 +17,22 @@ For the purpose of illustration, the left swipe recognizer can be enabled and di
 The view controller acts as a delegate for the tap recognizer so that it can disallow recognition of a tap within the segmented control. Recognizers ignore the exclusive touch setting for views. This is so that they can consistently recognize gestures even if they cross other views. For example, suppose you had two buttons, each marked exclusive touch, and you added a pinch gesture recognizer to their superview. That a finger came down in one the of the buttons shouldn't prevent you from pinching in the general case. If you do want to selectively disallow recognition of a gesture, you can use the recognizer's delegate methods. In this example, the view controller uses gestureRecognizer:shouldReceiveTouch: to test whether the tap recognizer will try to recognize a touch in the segmented control. If it is, it is disallowed.
 
 
-===========================================================================
+================================================================================
+MEMORY MANAGEMENT STYLE:
+
+Automatic Reference Counting (ARC)
+
+================================================================================
 BUILD REQUIREMENTS:
 
-Xcode 3.2.2 or later, Mac OS X v10.6 or later, iPhone OS 3.2 or later
+Xcode 4.2 or later, OS X v10.7 or later, iOS 5 or later.
 
-===========================================================================
+================================================================================
 RUNTIME REQUIREMENTS:
 
-Mac OS X v10.6 or later, iPhone OS 3.2 or later
+OS X v10.7 or later, iOS 5 or later.
 
-===========================================================================
+================================================================================
 PACKAGING LIST:
 
 GestureRecognizerAppDelegate.{h,m}
@@ -36,8 +41,11 @@ A simple application delegate that displays the application's window.
 GestureRecognizerViewController.{h,m}
 A view controller that manages a view and gesture recognizers.
 
-===========================================================================
+================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 2.0
+- Updated for to use storyboards and ARC. The gesture recognizers are now created in the storyboard rather than programmatically. The animations use the new block-based API.
 
 Version 1.2
 - Added localization support; viewDidUnload now releases IBOutlets.
@@ -48,5 +56,5 @@ Version 1.1
 Version 1.0
 - First version.
 
-===========================================================================
-Copyright (C) 2010 Apple Inc. All rights reserved.
+================================================================================
+Copyright (C) 2010-2011 Apple Inc. All rights reserved.
