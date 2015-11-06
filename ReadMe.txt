@@ -39,6 +39,9 @@ A view controller that manages a view and gesture recognizers.
 ===========================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 1.2
+- Added localization support; viewDidUnload now releases IBOutlets.
+
 Version 1.1
 - Updated the project build settings.
 
@@ -46,4 +49,4 @@ Version 1.0
 - First version.
 
 ===========================================================================
-Copyright (C) 2009 Apple Inc. All rights reserved.
+Copyright (C) 2010 Apple Inc. All rights reserved.

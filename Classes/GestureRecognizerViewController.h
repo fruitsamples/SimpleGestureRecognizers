@@ -8,7 +8,7 @@
  
  Notice that recognizers ignore the exclusiveTouch setting of views. 
  
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
